@@ -24,6 +24,7 @@ class HashTable:
         # Your code here
 
 
+
     def get_num_slots(self):
         """
         Return the length of the list you're using to hold the hash
