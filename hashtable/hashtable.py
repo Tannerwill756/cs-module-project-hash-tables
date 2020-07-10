@@ -16,6 +16,12 @@ class HashTableEntry:
     def search(self, target):
         cur_node = self.head
 
+
+<< << << < HEAD
+
+== == == =
+
+>>>>>> > 2733a4c172d8554993a99d476a75433172e4f3ca
         while cur_node is not None:
             if cur_node.value == target:
                 return cur_node
@@ -37,7 +43,10 @@ class HashTableEntry:
                 prev_node = prev_node.next
                 cur_node = cur_node.next
         return None
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2733a4c172d8554993a99d476a75433172e4f3ca
 
 # Hash table can't have fewer than this many slots
 MIN_CAPACITY = 8
@@ -124,7 +133,6 @@ class HashTable:
         key_index = self.get_index(key)
         cur_node = self.storage[key_index]
         done = False
-
         if cur_node == None:
             if self.get_load_factor() > 0.7:
                 self.resize(self.capacity * 2)
@@ -181,7 +189,6 @@ class HashTable:
         for i in self.storage:
             if i is not None:
                 bigHashTable.put(i.key, i.value)
-
         self.storage = bigHashTable.storage
 
 
